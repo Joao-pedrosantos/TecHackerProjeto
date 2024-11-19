@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Métricas do Servidor Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .custom-table {
+            background-color: #f9f9f9;
+        }
+        .custom-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .custom-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .custom-table tr:hover {
+            background-color: #ddd;
+        }
+        .malicious {
+            background-color: #ffcccc !important;
+        }
+        .normal {
+            background-color: #ccffcc !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Métricas do Servidor Web</h1>
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+    </div>
+</body>
+</html>
