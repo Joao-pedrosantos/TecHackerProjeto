@@ -9,7 +9,7 @@ def predict_url(url):
     """
     Predict if the given URL is malicious or benign.
     :param url: str, the URL to classify
-    :return: str, 'Malicious' or 'Benign'
+    :return: str, 'Maliciosa' or 'Normal'
     """
     try:
         # Tokenize the input
@@ -22,7 +22,7 @@ def predict_url(url):
             prediction = torch.argmax(logits, dim=1).item()
 
         # Map prediction to labels
-        return "Malicious" if prediction == 1 else "Benign"
+        return "Maliciosa" if prediction == 1 else "Normal"
     except Exception as e:
         print(f"Error in prediction: {e}")
         return "Unknown"
