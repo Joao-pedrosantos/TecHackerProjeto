@@ -4,7 +4,10 @@ from urllib.parse import urlparse, parse_qs
 import matplotlib.pyplot as plt
 
 # Caminho para o arquivo de log do Apache
-log_file = '/var/log/apache2/access.log'
+#log_file = '/var/log/apache2/access.log'
+
+# Caminho local para o arquivo de log
+log_file = 'logs/access.log'
 
 # Expressão regular para parsear o log do Apache
 log_pattern = re.compile(

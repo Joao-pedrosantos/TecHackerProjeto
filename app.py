@@ -3,19 +3,20 @@ import pandas as pd
 import re
 from urllib.parse import urlparse, parse_qs
 import os
+from model_predict import predict_url
 
 app = Flask(__name__)
 
 def classify_request(row):
-    # Exemplo simples de classificação
-    if row['status'] == '404' or row['num_params'] > 5:
-        return 'Malicious'
-    else:
-        return 'Normal'
+    url = row['url']
+    return predict_url(url)
 
 def process_logs():
     # Caminho para o arquivo de log do Apache
-    log_file = '/var/log/apache2/access.log'
+    #log_file = '/var/log/apache2/access.log'
+
+    # Caminho local para o arquivo de log
+    log_file = 'logs/access.log'
 
     # Verificar se o arquivo de log existe
     if not os.path.exists(log_file):
