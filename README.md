@@ -10,7 +10,7 @@ Este repositório contém um sistema para análise e detecção de ameaças cibe
 - [Exemplo de visualização](#Exemplo-de-visualização)
 - [Autores](#Autores)
 
-## 🌟Funcionalidades Principais
+## 🌟 Funcionalidades Principais
 
 * 🔍**Análise de Logs HTTP**: Processamento de arquivos de log no formato Apache para extrair informações úteis, como IP, status HTTP, método, URL e mais.
 * ⚠️**Detecção de Padrões Suspeitos**: Identificação de possíveis ameaças, como tentativas de injeção SQL, XSS e traversal directory.
@@ -18,7 +18,7 @@ Este repositório contém um sistema para análise e detecção de ameaças cibe
 * 📉**Remoção de Outliers**: Filtro estatístico para eliminar valores fora do padrão.
 * 📂**Exportação de Dados**: Salva resultados processados em arquivos CSV para análises posteriores.
 
-## 🛠️Instalação
+## 🛠️ Instalação
 
 1. Clone o repositório:
 
@@ -45,14 +45,14 @@ Este repositório contém um sistema para análise e detecção de ameaças cibe
     http://localhost:5000
     ```
 
-## 🚀Uso
+## 🚀 Uso
 
 Interface Web: Acesse /metrics para visualizar as métricas.
 ```
 http://localhost:5000/metrics
 ```
 
-### 🛠️Gerando um Log de Teste
+### 🛠️ Gerando um Log de Teste
 
 Para testar o sistema, você pode gerar uma entrada de log com uma requisição HTTP simples. Temos um exemplo de como fazer isso utilizando o cURL:
 
@@ -60,14 +60,14 @@ Para testar o sistema, você pode gerar uma entrada de log com uma requisição 
 curl -X GET "http://localhost:5000/test"
 ```
 
-## 🖼️Exemplo de visualização
+## 🖼️ Exemplo de visualização
 
 Ao acessar a interface web, você verá a seguinte tela:
 
 ![InterfaceWeb](imgs/web_logs.png)
 
 
-## ✍️Autores
+## ✍️ Autores
 
 - [João Pedro Santos](https://github.com/Joao-pedrosantos)
 - [Matheus Castellucci](https://github.com/MatheusCastellucci) 
