@@ -33,3 +33,4 @@
 127.0.0.1 - None [2024-11-24 15:09:09,150] "GET /favicon.ico? HTTP/1.1" 404 207 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 127.0.0.1 - None [2024-11-24 15:11:13,694] "GET /metrics? HTTP/1.1" 200 10616 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
 127.0.0.1 - None [2024-11-24 15:11:13,749] "GET /favicon.ico? HTTP/1.1" 404 207 "http://localhost:5000/metrics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+127.0.0.1 - None [2024-11-24 15:41:54,817] "GET /metrics? HTTP/1.1" 200 11317 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
