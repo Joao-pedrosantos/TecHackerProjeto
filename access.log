@@ -29,3 +29,7 @@
 127.0.0.1 - None [2024-11-23 17:11:20,533] "GET /login?username=admin%27--&password=irrelevant HTTP/1.1" 404 207 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 127.0.0.1 - None [2024-11-23 17:11:26,713] "GET /files?path=../../etc/passwd HTTP/1.1" 404 207 "-" "Mozilla/5.0"
 127.0.0.1 - None [2024-11-23 17:11:37,866] "GET /metrics? HTTP/1.1" 200 10850 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0"
+127.0.0.1 - None [2024-11-24 15:09:09,078] "GET /? HTTP/1.1" 200 79 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+127.0.0.1 - None [2024-11-24 15:09:09,150] "GET /favicon.ico? HTTP/1.1" 404 207 "http://127.0.0.1:5000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+127.0.0.1 - None [2024-11-24 15:11:13,694] "GET /metrics? HTTP/1.1" 200 10616 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+127.0.0.1 - None [2024-11-24 15:11:13,749] "GET /favicon.ico? HTTP/1.1" 404 207 "http://localhost:5000/metrics" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
