@@ -57,7 +57,8 @@ http://localhost:5000/metrics
 Para testar o sistema, você pode gerar uma entrada de log com uma requisição HTTP simples. Temos um exemplo de como fazer isso utilizando o cURL:
 
 ```bash
-curl -X GET "http://localhost:5000/test"
+curl http://localhost:5000/test
+
 ```
 
 ## Exemplo de visualização
