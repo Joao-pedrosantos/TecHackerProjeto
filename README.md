@@ -64,7 +64,7 @@ curl -X GET "http://localhost:5000/test"
 
 Ao acessar a interface web, você verá a seguinte tela:
 
-![InterfaceWeb](imgs/web_logs.png)
+![Interface Web](imgs/interface.png)
 
 Nela, você pode visualizar as métricas de logs, como quantidade de requisições por IP, status HTTP, método, URL e mais. Além disso, é possível visualizar a classificação de requisições, que indica se uma requisição é suspeita ou não.
 
