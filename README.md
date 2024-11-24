@@ -2,7 +2,7 @@
 
 Este repositório contém um sistema para análise e detecção de ameaças cibernéticas baseado em logs de acesso HTTP. Ele oferece uma interface web para visualizar métricas e realizar análises detalhadas, utilizando técnicas para identificar padrões maliciosos em requisições.
 
-## 🗂️Table of Contents
+## Table of Contents
 
 - [Funcionalidades Principais](#funcionalidades-principais)
 - [Instalação](#instalação)
@@ -52,7 +52,7 @@ Interface Web: Acesse /metrics para visualizar as métricas.
 http://localhost:5000/metrics
 ```
 
-### 🛠️ Gerando um Log de Teste
+### Gerando um Log de Teste
 
 Para testar o sistema, você pode gerar uma entrada de log com uma requisição HTTP simples. Temos um exemplo de como fazer isso utilizando o cURL:
 
