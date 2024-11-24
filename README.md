@@ -66,6 +66,12 @@ Ao acessar a interface web, você verá a seguinte tela:
 
 ![InterfaceWeb](imgs/web_logs.png)
 
+Nela, você pode visualizar as métricas de logs, como quantidade de requisições por IP, status HTTP, método, URL e mais. Além disso, é possível visualizar a classificação de requisições, que indica se uma requisição é suspeita ou não.
+
+Por último, aqui está um exemplo de um log considerado malicioso pelo sistema:
+
+![LogMalicioso](imgs/malicious_log.png)
+
 
 ## Autores
 
