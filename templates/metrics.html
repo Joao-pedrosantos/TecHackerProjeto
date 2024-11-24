@@ -3,22 +3,101 @@
 <html>
 <head>
     <title>Cyber Threat Detection Metrics</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    
     <style>
-        .custom-table {
-            width: 100%;
-            border-collapse: collapse;
+        .table-hover tbody tr:hover {
+            background-color: #f5f5f5;
         }
-        .custom-table, .custom-table th, .custom-table td {
-            border: 1px solid black;
+        .malicious {
+            background-color: #f8d7da !important;
         }
-        .custom-table th, .custom-table td {
-            padding: 8px;
-            text-align: left;
+        .suspicious {
+            background-color: #fff3cd !important;
         }
     </style>
 </head>
 <body>
-    <h1>Cyber Threat Detection Metrics</h1>
-    {{ tables[0]|safe }}
+    <div class="container">
+        <h1 class="mt-4">Cyber Threat Detection Metrics</h1>
+        
+        <!-- Summary Statistics -->
+        <div class="mt-4">
+            <h3>Summary</h3>
+            <ul>
+                <li>Total Requests: {{ total_requests }}</li>
+                <li>Malicious Requests: {{ malicious_requests }}</li>
+                <li>Suspicious Requests: {{ suspicious_requests }}</li>
+            </ul>
+        </div>
+
+        <!-- Alerts Section -->
+        <div class="mt-4">
+            <h3>Alerts</h3>
+            {% if alerts %}
+                <div class="alert alert-warning" role="alert">
+                    {% for alert in alerts %}
+                        <p>{{ alert }}</p>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No alerts at this time.</p>
+            {% endif %}
+        </div>
+
+        <!-- Data Table -->
+        <div class="mt-4">
+            <h3>Detailed Logs</h3>
+            <table id="logsTable" class="display table table-striped table-bordered table-hover" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>IP</th>
+                        <th>Time</th>
+                        <th>Method</th>
+                        <th>URL</th>
+                        <th>Status</th>
+                        <th>Size</th>
+                        <th>Num Params</th>
+                        <th>Suspicious Patterns</th>
+                        <th>Classification</th>
+                        <th>User Agent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for index, row in data.iterrows() %}
+                    <tr class="{% if row['classification'] == 'Malicious' %}malicious{% elif row['classification'] == 'Suspicious' %}suspicious{% endif %}">
+                        <td>{{ row['ip'] }}</td>
+                        <td>{{ row['time'] }}</td>
+                        <td>{{ row['method'] }}</td>
+                        <td>{{ row['url'] }}</td>
+                        <td>{{ row['status'] }}</td>
+                        <td>{{ row['size'] }}</td>
+                        <td>{{ row['num_params'] }}</td>
+                        <td>{{ row['suspicious_patterns'] }}</td>
+                        <td>{{ row['classification'] }}</td>
+                        <td>{{ row['user_agent'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Include jQuery and DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#logsTable').DataTable();
+        });
+    </script>
 </body>
 </html>

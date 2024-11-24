@@ -1,0 +1,18 @@
+ip,user,time,request,status,size,referer,user_agent,method,url,protocol,num_params,suspicious_patterns,url_length,classification
+127.0.0.1,-,19/Nov/2024:16:00:35 -0300,GET / HTTP/1.1,200,3460,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/,HTTP/1.1,0,0,1,Normal
+127.0.0.1,-,19/Nov/2024:16:00:35 -0300,GET /icons/ubuntu-logo.png HTTP/1.1,200,3607,http://localhost/,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/icons/ubuntu-logo.png,HTTP/1.1,0,0,22,Normal
+127.0.0.1,-,19/Nov/2024:16:00:36 -0300,GET /favicon.ico HTTP/1.1,404,487,http://localhost/,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/favicon.ico,HTTP/1.1,0,0,12,Error
+127.0.0.1,-,19/Nov/2024:16:08:59 -0300,GET /index.html HTTP/1.1,200,3460,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/index.html,HTTP/1.1,0,0,11,Normal
+127.0.0.1,-,19/Nov/2024:16:09:11 -0300,GET /manual.html HTTP/1.1,404,488,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/manual.html,HTTP/1.1,0,0,12,Error
+127.0.0.1,-,19/Nov/2024:16:17:09 -0300,GET /manual-en-us HTTP/1.1,404,488,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/manual-en-us,HTTP/1.1,0,0,13,Error
+127.0.0.1,-,19/Nov/2024:16:17:13 -0300,GET /manual HTTP/1.1,404,487,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0,GET,/manual,HTTP/1.1,0,0,7,Error
+127.0.0.1,-,19/Nov/2024:16:18:39 -0300,GET /manuaol HTTP/1.1,404,488,-,Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101Â Firefox/132.0,GET,/manuaol,HTTP/1.1,0,0,8,Error
+127.0.0.1,-,19/Nov/2024:16:20:10 -0300,GET /login.php?id=1' OR '1'='1 HTTP/1.1,200,1024,-,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:110.0) Gecko/20100101 Firefox/110.0,GET,/login.php?id=1',OR '1'='1 HTTP/1.1,1,1,16,Malicious
+127.0.0.1,-,19/Nov/2024:16:20:25 -0300,GET /search?q=<script>alert('xss')</script> HTTP/1.1,200,2048,-,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.0.0 Safari/537.36",GET,/search?q=<script>alert('xss')</script>,HTTP/1.1,1,1,39,Malicious
+127.0.0.1,-,19/Nov/2024:16:21:00 -0300,GET /../../../../etc/passwd HTTP/1.1,403,512,-,curl/7.79.1,GET,/../../../../etc/passwd,HTTP/1.1,0,1,23,Malicious
+127.0.0.1,-,19/Nov/2024:16:21:30 -0300,GET /ping?ip=127.0.0.1;rm -rf / HTTP/1.1,500,128,-,Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html),GET,/ping?ip=127.0.0.1;rm,-rf / HTTP/1.1,1,0,21,Error
+127.0.0.1,-,19/Nov/2024:16:22:00 -0300,POST /login.php HTTP/1.1,401,1024,-,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36",POST,/login.php,HTTP/1.1,0,0,10,Error
+127.0.0.1,-,19/Nov/2024:16:22:01 -0300,POST /login.php HTTP/1.1,401,1024,-,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36",POST,/login.php,HTTP/1.1,0,0,10,Error
+127.0.0.1,-,19/Nov/2024:16:23:31 -0300,GET /? HTTP/1.1,200,79,-,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0",GET,/?,HTTP/1.1,0,0,2,Normal
+127.0.0.1,,"2024-11-24 20:32:57,783",GET /favicon.ico? HTTP/1.1,404,207,http://localhost:5000/,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0",GET,/favicon.ico?,HTTP/1.1,0,0,13,Error
+127.0.0.1,None,"2024-11-24 20:35:54,538",GET /? HTTP/1.1,200,79,-,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 OPR/114.0.0.0",GET,/?,HTTP/1.1,0,0,2,Normal
